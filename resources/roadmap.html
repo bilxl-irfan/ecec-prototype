@@ -3,66 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../assets/ecec-logo.png">  
-    <title>Constitution - ECEC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <!-- Fonts -->
+    <title>Technical Roadmap - ECEC</title>
+    <link rel="icon" type="image/png" href="../assets/ecec-logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="roadmap.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <a href="../index.html" class="nav-logo">
+        <a href="index.html" class="nav-logo">
             <img src="../assets/ecec-logo.png" alt="ECEC Icon" class="nav-icon">
             <!--<span>ECEC</span>-->
         </a>
         <div class="nav-links">
-            <a href="../index.html" class="active">Home</a>
-            <a href="../about.html">About & People</a>
-            <a href="../teams.html">Teams</a>
-            <a href="../competitions.html">Competitions</a>
-            <a href="../events.html">Events</a>
-            <a href="../contact.html" class="cta-link">Join Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="teams.html">Teams</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="contact.html" class="cta-link">Join Us</a>
         </div>
         <div class="mobile-menu-btn" id="menu-toggle">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-</div>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
-        <div id="scroll-progress"></div>
+    <main class="roadmap-main">
+        <header class="roadmap-hero">
+            <span class="mono-tag">// DIRECTIVE: STRATEGIC_EVOLUTION_2026</span>
+            <h1><span class="highlight">Technical Roadmap</span></h1>
+            <p>Moving beyond theory. ECEC is committed to a multi-phase deployment of advanced engineering projects and community infrastructure.</p>
+        </header>
 
-    <main class="resource-main">
-        <div class="constitution-container">
-            <header class="const-header">
-                <h1>Club Constitution</h1>
-                <p>Last Updated: February 2026</p>
-            </header>
-
-            <article class="const-body">
-                <section class="const-section">
-                    <h3>Article I: Name & Mandate</h3>
-                    <p>The organization shall be known as the Electrical & Computer Engineering Club (ECEC) at Toronto Metropolitan University. Its mandate is to foster technical innovation and community through hands-on projects.</p>
-                </section>
-
-                <section class="const-section">
-                    <h3>Article II: Membership</h3>
-                    <p>Membership is open to all students, with a primary focus on engineering disciplines. Active status is maintained by participation in at least one design squad or workshop per semester.</p>
-                </section>
-
-                <section class="const-section">
-                    <h3>Article III: Executive Structure</h3>
-                    <p>The core leadership consists of Founders, Lead Admins, and specialized Technical Leads (Hardware, AI, Robotics). Dr. Soosan Beheshti serves as the primary Faculty Advisor.</p>
-                </section>
-            </article>
+        <section class="roadmap-grid container">
+    <div class="roadmap-column">
+        <div class="column-header">
+            <span class="phase-label">PHASE_01</span>
+            <span class="status-tag complete">STABLE</span>
+            <h3>Foundation & Infrastructure</h3>
+            <p>Establishing the core operational framework for student-led innovation.</p>
         </div>
+        <ul class="roadmap-list">
+            <li>Launch 4 Specialized Design Squads: ASIC, XR, Neurotech, and AM System.</li>
+            <li>Initialize the Admin Uplink for streamlined club operations.</li>
+            <li>Finalize Faculty Mentorship with Dr. Soosan Beheshti and other experts.</li>
+            <li>Release the ECEC Operational Constitution.</li>
+        </ul>
+    </div>
+
+    <div class="roadmap-column">
+        <div class="column-header">
+            <span class="phase-label">PHASE_02</span>
+            <span class="status-tag pulse">ACTIVE_DEPLOYMENT</span>
+            <h3>Technical Engagement</h3>
+            <p>Executing high-impact competitions and collaborative workshops.</p>
+        </div>
+        <ul class="roadmap-list">
+            <li>Host ASIC Hackathons & other technical design competitions.</li>
+            <li>Deploy the Expense Claims system for squad resource management.</li>
+            <li>Establish digital documentation for all open-source projects.</li>
+        </ul>
+    </div>
+
+    <div class="roadmap-column">
+        <div class="column-header">
+            <span class="phase-label">PHASE_03</span>
+            <span class="status-tag future">HORIZON</span>
+            <h3>Ecosystem Expansion</h3>
+            <p>Scaling our reach to national competitions and custom manufacturing.</p>
+        </div>
+        <ul class="roadmap-list">
+            <li>Coordinate inter-university hackathons and technical symposiums.</li>
+            <li>Launch the "Custom PCB" program for member-led prototyping.</li>
+            <li>Transition design squad projects into national competitions.</li>
+        </ul>
+    </div>
+</section>
     </main>
 
     <footer class="sys-footer">
@@ -97,7 +120,7 @@
                 <h4>RESOURCES</h4>
                 <ul class="footer-links">
                     <li><a href="../resources/constitution.html">Constitution</a></li>
-                    <li><a href="roadmap.html">Technical Roadmap</a></li>
+                    <li><a href="../resources/roadmap.html">Technical Roadmap</a></li>
                     <li><a href="../admin-login.html">Admin Uplink</a></li>
                     <li><a href="../contact.html">Report Issue</a></li>
                 </ul>
@@ -123,8 +146,6 @@
         </div>
     </footer>
 
-
-    <script src="script.js"></script>
-
+    <script src="../script.js"></script>
 </body>
 </html>

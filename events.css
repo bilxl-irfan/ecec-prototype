@@ -295,3 +295,44 @@ main {
     display: flex;
     justify-content: flex-end;
 }
+
+/* Vertical stacking for mobile */
+@media (max-width: 768px) {
+    .events-hero h1 {
+        font-size: 3rem; /* Scaled down for smaller screens */
+    }
+
+    .event-row {
+        flex-direction: column; /* Stacks date, details, and button */
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2.5rem 1rem;
+    }
+
+    .event-date {
+        margin-bottom: 0.5rem;
+    }
+
+    .event-action {
+        width: 100%; /* Makes button full-width for easier tapping */
+        justify-content: center;
+    }
+
+    .rsvp-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.events-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Essential for mobile safety */
+}
