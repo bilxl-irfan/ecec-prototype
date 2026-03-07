@@ -275,36 +275,57 @@ iframe {
 .matrix-btn.linkedin:hover { border-color: #0077b5; box-shadow: 0 0 15px rgba(0, 119, 181, 0.2); }
 .matrix-btn.discord:hover { border-color: #5865F2; }
 
-/* Custom Icon Colors on Hover */
-.matrix-btn.linkedin:hover { border-color: #0077b5; box-shadow: 0 0 15px rgba(0, 119, 181, 0.3); }
-.matrix-btn.linkedin svg { color: #0077b5; }
+/* New Grid for Socials */
+.social-matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 1rem;
+}
 
-.matrix-btn.discord:hover { border-color: #5865F2; }
-.matrix-btn.discord svg { color: #5865F2; }
+.matrix-card {
+    display: flex;
+    flex-direction: column; /* Icon above text */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0.5rem;
+    background: #0f0f0f;
+    border: 1px solid #222;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-/* Adjusted form layout */
-.uplink-form {
+.matrix-card span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #fff;
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
+
+.matrix-card:hover {
+    border-color: var(--neon-blue);
+    background: #151515;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+}
+
+/* Sidebar stacking */
+.info-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem; /* Tighter gap for better flow */
 }
 
-.terminal-success {
-    padding: 5rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.4s ease;
+/* HQ Map sizing adjustment */
+.map-wrapper {
+    height: 200px; /* Slightly shorter to keep layout compact */
 }
 
-.success-icon {
-    font-size: 3rem;
-    color: #00FF88;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* FAQ Styling */
+.faq-mini {
+    background: #0a0a0a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #1a1a1a;
 }
