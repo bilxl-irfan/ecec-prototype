@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Authorization - ECEC</title>
+    <link rel="icon" type="image/png" href="assets/ecec-logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body class="gatekeeper-body">
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/ecec-logo.png" alt="ECEC Icon" class="nav-icon">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About & People</a>
+            <a href="teams.html">Teams</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html" class="cta-link">Join Us</a>
+        </div>
+    </nav>
+
+    <main class="gatekeeper-main">
+        <div class="login-container">
+            <div class="admin-login-box">
+                <div class="panel-header">
+                    <div class="status-light alert" id="form-light"></div>
+                </div>
+                
+                <div class="login-content">
+                    <h2 class="terminal-title">AUTHORIZATION REQUIRED</h2>
+                    <p class="terminal-subtitle">Enter Operator Clearance Key to access administrative directives.</p>
+                    
+                    <div class="input-group">
+                        <label>CLEARANCE KEY</label>
+                        <input type="password" id="admin-pass" placeholder="••••••••" required>
+                    </div>
+                    
+                    <button onclick="checkAuth()" class="btn-verify">
+                        <span>VERIFY IDENTITY</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </button>
+                    
+                    <div id="error-msg" class="access-denied" style="display: none;">
+                        <span class="error-code">ERR_UNAUTHORIZED:</span> ACCESS DENIED
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function checkAuth() {
+            const pass = document.getElementById('admin-pass').value;
+            // Access Key
+            if (pass === "jasonleftus") { 
+                sessionStorage.setItem('adminAuth', 'true');
+                window.location.href = "admin_uplink.html";
+            } else {
+                const error = document.getElementById('error-msg');
+                const light = document.getElementById('form-light');
+                error.style.display = 'block';
+                // Visual feedback for failure
+                light.style.animation = 'none';
+                void light.offsetWidth; // Trigger reflow
+                light.style.animation = 'alert-pulse 0.2s 3';
+            }
+        }
+
+        // Enter key support
+        document.getElementById('admin-pass').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') checkAuth();
+        });
+    </script>
+</body>
+</html>

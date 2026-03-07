@@ -1,0 +1,76 @@
+/* resources.css */
+.resource-main {
+    padding: 8rem 2rem 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mono-tag {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--neon-blue);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.resource-hero { text-align: center; margin-bottom: 5rem; }
+.resource-hero h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 1.5rem; }
+.resource-hero p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
+
+/* Tier Grid */
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.tier-card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2.5rem;
+    border-radius: 12px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tier-card.featured {
+    border-color: var(--neon-blue);
+    background: #161616;
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--neon-blue);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.tier-header { font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+.price { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--neon-blue); margin-bottom: 2rem; }
+
+.benefit-list { list-style: none; padding: 0; }
+.benefit-list li { margin-bottom: 1rem; color: #ccc; font-size: 0.9rem; position: relative; padding-left: 20px; }
+.benefit-list li::before { content: "✓"; position: absolute; left: 0; color: var(--neon-blue); }
+
+/* Constitution Styling */
+.constitution-container { background: #0a0a0a; padding: 3rem; border-radius: 8px; border: 1px solid #222; }
+.const-header { border-bottom: 1px solid #222; padding-bottom: 2rem; margin-bottom: 3rem; font-family: 'Orbitron', sans-serif; }
+.const-section { margin-bottom: 2.5rem; }
+.const-section h3 { color: var(--neon-blue); font-family: 'Poppins', sans-serif; margin-bottom: 1rem; }
+.const-section p { color: #ccc; line-height: 1.8; }
+
+.resource-action { text-align: center; margin-top: 4rem; }
+
+/* Scroll Progress */
+#scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; background: var(--neon-blue);
+    width: 0%; z-index: 1000; box-shadow: 0 0 10px var(--neon-blue);
+}
