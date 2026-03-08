@@ -2,7 +2,7 @@
 
 .roadmap-main {
     padding: 8rem 0 6rem;
-    background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.03), transparent 40%);
+    background: radial-gradient(circle at top left, rgba(100, 255, 218, 0.03), transparent 40%);
 }
 
 .roadmap-hero {
@@ -30,7 +30,7 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: linear-gradient(to bottom, var(--neon-blue), transparent);
+    background: linear-gradient(to bottom, rgba(100, 255, 218, 0.5), transparent);
 }
 
 .roadmap-item {
@@ -48,14 +48,14 @@
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background: #222;
+    background: #0A192F;
     border: 2px solid var(--neon-blue);
     z-index: 2;
 }
 
 .active-phase::before {
     background: var(--neon-blue);
-    box-shadow: 0 0 15px var(--neon-blue);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.6);
 }
 
 /* Meta Labels */
@@ -74,12 +74,12 @@
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.7rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(100, 255, 218, 0.05);
 }
 
-.status-tag.complete { color: #00FF88; border: 1px solid #00FF88; }
+.status-tag.complete { color: #64FFDA; border: 1px solid rgba(100, 255, 218, 0.5); }
 .status-tag.pulse { color: var(--neon-blue); border: 1px solid var(--neon-blue); animation: roadmap-pulse 2s infinite; }
-.status-tag.future { color: var(--text-muted); border: 1px solid #444; }
+.status-tag.future { color: var(--text-muted); border: 1px solid #233554; }
 
 @keyframes roadmap-pulse {
     0% { opacity: 1; }
@@ -153,8 +153,8 @@
 }
 
 .roadmap-column {
-    background: #0f0f0f;
-    border: 1px solid #222;
+    background: #112240;
+    border: 1px solid #233554;
     padding: 2rem;
     border-radius: 8px;
     display: flex;
@@ -194,7 +194,7 @@
 }
 
 .column-header p {
-    color: var(--text-muted);
+    color: #8892B0;
     font-size: 0.9rem;
     min-height: 3rem; /* Forces subheadings to align */
     margin-bottom: 2rem;
@@ -205,7 +205,7 @@
 .roadmap-list {
     list-style: none;
     padding: 0;
-    border-top: 1px solid #222; /* Visual separator to emphasize alignment */
+    border-top: 1px solid #233554; /* Visual separator to emphasize alignment */
     padding-top: 1.5rem;
 }
 
@@ -213,7 +213,7 @@
     position: relative;
     padding-left: 1.5rem;
     font-size: 0.85rem;
-    color: #ddd;
+    color: #CCD6F6;
     margin-bottom: 1rem;
 }
 

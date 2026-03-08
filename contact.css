@@ -7,10 +7,10 @@
 .contact-main {
     padding-top: 5rem;
     min-height: 100vh;
-    background-color: #050505;
+    background-color: #0A192F;
     background-image: 
-        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -27,7 +27,7 @@
     font-size: 3.5rem;
     color: #fff;
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(0,255,255,0.2);
+    text-shadow: 0 0 20px rgba(100,255,218,0.2);
 }
 
 .contact-hero p {
@@ -48,16 +48,16 @@
 
 /* Common Panel Styles */
 .form-container, .location-block {
-    background: #0f0f0f;
-    border: 1px solid #222;
+    background: #112240;
+    border: 1px solid #233554;
     border-radius: 8px;
     overflow: hidden;
 }
 
 .panel-header {
-    background: #151515;
+    background: #1B2B48;
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #233554;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +65,7 @@
 
 .panel-title {
     font-family: var(--font-mono);
-    color: #666;
+    color: #fff;
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
@@ -96,8 +96,8 @@
 .input-group select, 
 .input-group textarea {
     width: 100%;
-    background: #0a0a0a;
-    border: 1px solid #333;
+    background: #0A192F;
+    border: 1px solid #233554;
     padding: 1rem;
     color: #fff;
     font-family: var(--font-body);
@@ -135,7 +135,7 @@
 .submit-btn:hover {
     background: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 0 20px var(--neon-blue);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
 }
 
 /* Right Sidebar */
@@ -152,7 +152,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: #111;
+    background: #112240;
     border: 1px solid #222;
     text-decoration: none;
     border-radius: 6px;
@@ -189,7 +189,7 @@ iframe {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background: rgba(0,0,0,0.8);
+    background: rgba(10,25,47,0.9);
     padding: 0.8rem;
     border-radius: 4px;
     border-left: 3px solid var(--neon-blue);
@@ -209,7 +209,7 @@ iframe {
 .faq-item {
     margin-bottom: 1rem;
     padding-left: 1rem;
-    border-left: 1px solid #333;
+    border-left: 1px solid #233554;
 }
 
 .faq-item .q { color: var(--neon-blue); font-weight: 600; margin-bottom: 0.2rem; font-size: 0.9rem; }
@@ -263,7 +263,7 @@ iframe {
 
 .reset-btn:hover {
     background: var(--neon-blue);
-    color: #000;
+    color: #0A192F;
 }
 
 @keyframes terminalPulse {
@@ -288,8 +288,8 @@ iframe {
     align-items: center;
     justify-content: center;
     padding: 1.5rem 0.5rem;
-    background: #0f0f0f;
-    border: 1px solid #222;
+    background: #112240;
+    border: 1px solid #233554;
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -305,9 +305,9 @@ iframe {
 
 .matrix-card:hover {
     border-color: var(--neon-blue);
-    background: #151515;
+    background: #1B2B48;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
 }
 
 /* Sidebar stacking */
@@ -324,8 +324,8 @@ iframe {
 
 /* FAQ Styling */
 .faq-mini {
-    background: #0a0a0a;
+    background: #020C1B;
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #233554;
 }

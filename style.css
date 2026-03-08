@@ -2,11 +2,11 @@
 
 /* Variables */
 :root {
-    --bg-color: #0D0D0D;
-    --card-bg: #1A1A1A;
-    --neon-blue: #00FFFF;
+    --bg-color: #0A192F;
+    --card-bg: #112240;
+    --neon-blue: #64FFDA;
     --text-color: #FFFFFF;
-    --text-muted: #808080;
+    --text-muted: #8892B0;
     --font-heading: 'Poppins', sans-serif; /* Default Heading */
     --font-body: 'Inter', sans-serif;
     --font-tech: 'Orbitron', sans-serif; /* For Logo */
@@ -45,9 +45,22 @@ a { text-decoration: none; color: inherit; }
     text-shadow: 0 0 20px var(--neon-blue); 
     margin-bottom: 20px; 
 }
-.progress-bar { width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden; }
-.progress-fill { width: 0%; height: 100%; background: var(--neon-blue); box-shadow: 0 0 10px var(--neon-blue); transition: width 0.2s; }
-.loader-status { display: flex; justify-content: space-between; color: var(--neon-blue); font-family: monospace; font-size: 0.9rem; margin-top: 10px; }
+.progress-bar { width: 100%; height: 4px; background: #233554; border-radius: 2px; overflow: hidden; }
+.progress-fill { 
+    width: 0%; 
+    height: 100%; 
+    background: #FFFFFF; /* Changed to white */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow */
+    transition: width 0.2s; 
+}
+.loader-status { 
+    display: flex; 
+    justify-content: space-between; 
+    color: #FFFFFF; /* Changed to white */
+    font-family: monospace; 
+    font-size: 0.9rem; 
+    margin-top: 10px; 
+}
 
 /* Scroll Progress */
 #scroll-progress {
@@ -59,8 +72,8 @@ a { text-decoration: none; color: inherit; }
 .navbar {
     position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(13, 13, 13, 0.8); backdrop-filter: blur(10px); z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(10px); z-index: 100;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
 /* Navbar Logo Styling & Animation (UPDATED: Option 1 Orbitron) */
@@ -72,7 +85,7 @@ a { text-decoration: none; color: inherit; }
     background: linear-gradient(to bottom, #fff, #aaa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5); /* Cyan Glow */
+    text-shadow: 0px 0px 15px rgba(100, 255, 218, 0.4); /* Cyan Glow */
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
@@ -82,9 +95,9 @@ a { text-decoration: none; color: inherit; }
 .nav-logo:hover {
     letter-spacing: 4px; /* Expands width */
     text-shadow: 
-        0 0 10px rgba(0, 255, 255, 0.8),
-        0 0 20px rgba(0, 255, 255, 0.4),
-        0 0 40px rgba(0, 255, 255, 0.2);
+        0 0 10px rgba(100, 255, 218, 0.8),
+        0 0 20px rgba(100, 255, 218, 0.4),
+        0 0 40px rgba(100, 255, 218, 0.2);
     transform: translateY(-1px);
 }
 
@@ -117,7 +130,7 @@ a { text-decoration: none; color: inherit; }
     padding: 0.5rem 1.2rem; border: 1px solid var(--neon-blue); color: var(--neon-blue);
     border-radius: 4px; transition: all 0.3s;
 }
-.nav-links .cta-link:hover { background: var(--neon-blue); color: var(--bg-color); box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); }
+.nav-links .cta-link:hover { background: var(--neon-blue); color: var(--bg-color); box-shadow: 0 0 15px rgba(100, 255, 218, 0.4); }
 .mobile-menu-btn { display: none; cursor: pointer; font-size: 1.5rem; }
 
 /* Hero Section */
@@ -149,7 +162,7 @@ a { text-decoration: none; color: inherit; }
     font-weight: 800;
     letter-spacing: -1px;
 }
-.hero h1 .highlight { color: var(--neon-blue); text-shadow: 0 0 30px rgba(0, 255, 255, 0.3); }
+.hero h1 .highlight { color: var(--neon-blue); text-shadow: 0 0 30px rgba(100, 255, 218, 0.3); }
 
 .hero p {
     font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2.5rem;
@@ -158,8 +171,8 @@ a { text-decoration: none; color: inherit; }
 
 .hero-buttons { display: flex; gap: 1rem; justify-content: center; }
 .btn { padding: 1rem 2.5rem; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; cursor: pointer; }
-.btn.primary { background: linear-gradient(135deg, var(--neon-blue), rgba(0, 255, 255, 0.7)); color: var(--bg-color); box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); }
-.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5); }
+.btn.primary { background: linear-gradient(135deg, var(--neon-blue), rgba(0, 255, 255, 0.7)); color: var(--bg-color); box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3); }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(100, 255, 218, 0.5); }
 .btn.secondary { background: transparent; color: var(--text-color); border: 1px solid rgba(255, 255, 255, 0.2); }
 .btn.secondary:hover { border-color: var(--text-color); }
 
@@ -221,7 +234,7 @@ a { text-decoration: none; color: inherit; }
 
 /* System Footer Styling (UPDATED Alignment) */
 .sys-footer {
-    background: #080808;
+    background: #020C1B;
     border-top: 1px solid #222;
     padding: 4rem 2rem 2rem;
     font-size: 0.9rem;
@@ -320,10 +333,10 @@ a { text-decoration: none; color: inherit; }
     justify-content: flex-end;
 }
 
-.social-icons a { color: #666; transition: 0.3s; }
+.social-icons a { color: #8892B0; transition: 0.3s; }
 .social-icons a:hover { color: #fff; transform: translateY(-3px); }
 
-.copyright { color: #444; font-size: 0.8rem; line-height: 1.5; }
+.copyright { color: #8892B0; font-size: 0.8rem; line-height: 1.5; }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -357,7 +370,7 @@ a { text-decoration: none; color: inherit; }
         top: 70px; /* Push below navbar */
         right: 0;
         width: 100%;
-        background: rgba(13, 13, 13, 0.95); /* Dark background */
+        background: rgba(17, 34, 64, 0.98); /* Dark background */
         backdrop-filter: blur(10px);
         padding: 2rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -398,7 +411,7 @@ a { text-decoration: none; color: inherit; }
     height: 50px;
     width: auto;
     /* Initial subtle glow */
-    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
+    filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.3));
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
 }
 
@@ -411,15 +424,15 @@ a { text-decoration: none; color: inherit; }
 /* New Hover State: Bouncy Zoom + Intense Glow */
 .nav-logo:hover .nav-icon {
     transform: scale(1.2); /* Clean zoom without tilting */
-    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.8));
+    filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.8));
     animation: tech-pulse 2s infinite ease-in-out;
 }
 
 /* Subtle breathing effect for the glow while hovering */
 @keyframes tech-pulse {
-    0% { filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.8)); }
-    50% { filter: drop-shadow(0 0 25px rgba(0, 255, 255, 1)); }
-    100% { filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.8)); }
+    0% { filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.8)); }
+    50% { filter: drop-shadow(0 0 25px rgba(100, 255, 218, 1)); }
+    100% { filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.8)); }
 }
 
 
@@ -444,8 +457,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
 }
 
 /* Mobile Menu Button Styling */
@@ -477,4 +490,36 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 768px) {
     .mobile-menu-btn { display: flex; }
+}
+
+/* style.css */
+
+/* Loader Logo Styling */
+.loader-logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+    animation: loader-pulse 2s infinite ease-in-out;
+}
+
+/* Optional: Add a breathing pulse animation to the logo while loading */
+@keyframes loader-pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)); 
+    }
+    50% { 
+        transform: scale(1.05); 
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)); 
+    }
+}
+
+/* Ensure the loader content stays centered */
+.loader-content {
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

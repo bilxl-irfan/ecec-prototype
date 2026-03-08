@@ -26,8 +26,8 @@
 }
 
 .tier-card {
-    background: #111;
-    border: 1px solid #222;
+    background: #112240;
+    border: 1px solid #233554;
     padding: 2.5rem;
     border-radius: 12px;
     position: relative;
@@ -36,7 +36,7 @@
 
 .tier-card.featured {
     border-color: var(--neon-blue);
-    background: #161616;
+    background: #1B2B48;
     transform: scale(1.05);
 }
 
@@ -46,7 +46,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: var(--neon-blue);
-    color: #000;
+    color: #0A192F;
     font-size: 0.7rem;
     font-weight: 800;
     padding: 4px 12px;
@@ -57,20 +57,20 @@
 .price { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--neon-blue); margin-bottom: 2rem; }
 
 .benefit-list { list-style: none; padding: 0; }
-.benefit-list li { margin-bottom: 1rem; color: #ccc; font-size: 0.9rem; position: relative; padding-left: 20px; }
+.benefit-list li { margin-bottom: 1rem; color: #CCD6F6; font-size: 0.9rem; position: relative; padding-left: 20px; }
 .benefit-list li::before { content: "✓"; position: absolute; left: 0; color: var(--neon-blue); }
 
 /* Constitution Styling */
-.constitution-container { background: #0a0a0a; padding: 3rem; border-radius: 8px; border: 1px solid #222; }
-.const-header { border-bottom: 1px solid #222; padding-bottom: 2rem; margin-bottom: 3rem; font-family: 'Orbitron', sans-serif; }
+.constitution-container { background: #0A192F; padding: 3rem; border-radius: 8px; border: 1px solid #233554; }
+.const-header { border-bottom: 1px solid #233554; padding-bottom: 2rem; margin-bottom: 3rem; font-family: 'Orbitron', sans-serif; }
 .const-section { margin-bottom: 2.5rem; }
 .const-section h3 { color: var(--neon-blue); font-family: 'Poppins', sans-serif; margin-bottom: 1rem; }
-.const-section p { color: #ccc; line-height: 1.8; }
+.const-section p { color: #8892B0; line-height: 1.8; }
 
 .resource-action { text-align: center; margin-top: 4rem; }
 
 /* Scroll Progress */
 #scroll-progress {
     position: fixed; top: 0; left: 0; height: 3px; background: var(--neon-blue);
-    width: 0%; z-index: 1000; box-shadow: 0 0 10px var(--neon-blue);
+    width: 0%; z-index: 1000; box-shadow: 0 0 10px rgba(100, 255, 218, 0.4);
 }
