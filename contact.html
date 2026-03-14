@@ -189,16 +189,16 @@
                         if (Object.hasOwn(data, 'errors')) {
                             alert(data["errors"].map(error => error["message"]).join(", "));
                         } else {
-                            alert("Transmission Error. Check Formspree activation.");
+                            alert("Something went wrong. Please try again.");
                         }
                     });
                     submitBtn.disabled = false;
-                    submitBtn.querySelector('span').innerText = "RETRY UPLINK";
+                    submitBtn.querySelector('span').innerText = "TRY AGAIN";
                 }
             }).catch(error => {
                 alert("Network Fault. Check your connection.");
                 submitBtn.disabled = false;
-                submitBtn.querySelector('span').innerText = "RETRY UPLINK";
+                submitBtn.querySelector('span').innerText = "TRY AGAIN";
             });
         });
     </script>

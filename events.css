@@ -66,6 +66,10 @@ main {
     white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .section-title h2 { white-space: normal; font-size: 2rem; }
+}
+
 .glitch-line {
     height: 1px;
     width: 100%;

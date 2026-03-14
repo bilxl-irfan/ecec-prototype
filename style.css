@@ -447,6 +447,8 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 768px) {
     .mobile-menu-btn { display: flex; }
+    .page-hero { padding: 8rem 1.5rem 3rem; }
+    .page-hero h1 { font-size: 2.5rem; }
 }
 
 /* style.css */

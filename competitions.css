@@ -109,6 +109,10 @@ main {
     white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .section-header h2 { white-space: normal; font-size: 2rem; }
+}
+
 .decoration-line {
     height: 1px;
     width: 100%;
