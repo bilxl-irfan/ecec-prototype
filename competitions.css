@@ -8,7 +8,6 @@
 main {
     background-color: #0A192F;
     min-height: 100vh;
-    padding-top: 5rem;
 }
 
 /* Hero Section */
@@ -91,7 +90,7 @@ main {
 
 /* Missions Section */
 .missions-section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem 4rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -229,7 +228,7 @@ main {
     flex: 1;
     text-align: center;
     padding: 0.8rem;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 4px;
@@ -237,11 +236,16 @@ main {
     transition: 0.2s;
     text-decoration: none;
     font-family: var(--font-mono);
+    white-space: nowrap;
 }
 
 .btn-register {
     background: var(--neon-blue);
     color: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
 }
 .btn-register:hover { background: #fff; }
 

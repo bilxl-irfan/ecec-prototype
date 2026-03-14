@@ -1,5 +1,25 @@
 /* style.css - Complete Updated File */
 
+/* Shared Page Hero */
+.page-hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(100, 255, 218, 0.05) 0%, transparent 100%);
+}
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    margin-bottom: 1rem;
+}
+.page-hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* Variables */
 :root {
     --bg-color: #0A192F;
@@ -290,7 +310,11 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .mobile-menu-btn { display: block; }
+    .hero { padding: 0 2.5rem; }
     .hero h1 { font-size: 3rem; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn { min-width: 0; width: 100%; max-width: 280px; }
+    .container { grid-template-columns: 1fr; }
 }
 
 /* Add this to the bottom of style.css */
@@ -301,7 +325,7 @@ a { text-decoration: none; color: inherit; }
         display: flex; /* Keep flex for layout */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Push below navbar */
+        top: 85px; /* Push below navbar */
         right: 0;
         width: 100%;
         background: rgba(17, 34, 64, 0.98); /* Dark background */

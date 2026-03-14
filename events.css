@@ -67,10 +67,9 @@ main {
 }
 
 .glitch-line {
-    height: 2px;
+    height: 1px;
     width: 100%;
-    background: repeating-linear-gradient(90deg, var(--neon-blue) 0, var(--neon-blue) 10px, transparent 10px, transparent 20px);
-    opacity: 0.5;
+    background: linear-gradient(90deg, var(--neon-blue), transparent);
 }
 
 /* Event Row (Ticket Style) */
