@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // Loader Logic
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
+    if (!loader) {
+        // Not on home page — mark that the user has navigated so home skips the loader
+        sessionStorage.setItem('hasNavigated', '1');
+        return;
+    }
+
+    if (sessionStorage.getItem('hasNavigated')) {
+        loader.style.display = 'none';
+        return;
+    }
+
     const fill = document.querySelector('.progress-fill');
     const percent = document.getElementById('loader-percent');
     let width = 0;
@@ -22,7 +33,10 @@ window.addEventListener('load', () => {
             clearInterval(interval);
             setTimeout(() => {
                 loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    sessionStorage.setItem('hasNavigated', '1');
+                }, 500);
             }, 500);
         } else {
             width += Math.random() * 10;

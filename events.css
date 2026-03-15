@@ -7,50 +7,38 @@
 main {
     background-color: #0A192F;
     min-height: 100vh;
-    padding-top: 5rem;
 }
 
 /* Hero */
-.events-hero {
-    padding: 6rem 2rem 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
+.page-hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(100, 255, 218, 0.05) 0%, transparent 100%);
 }
 
-.status-live {
-    color: var(--neon-blue);
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    display: inline-block;
-    background: rgba(100, 255, 218, 0.1);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-}
-
-.events-hero h1 {
+.page-hero h1 {
     font-family: var(--font-heading);
-    font-size: 4.5rem;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    margin-bottom: 1rem;
 }
 
-.events-hero p {
-    color: var(--text-muted);
+.page-hero p {
     font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 3rem;
-    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
 }
 
 .hero-stats {
     display: flex;
+    justify-content: center;
     gap: 4rem;
     border-top: 1px solid rgba(100, 255, 218, 0.1);
     padding-top: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .stat { display: flex; flex-direction: column; }
@@ -59,7 +47,7 @@ main {
 
 /* Events List */
 .events-list-section {
-    padding: 4rem 2rem;
+    padding: 1.5rem 2rem 4rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -78,11 +66,14 @@ main {
     white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .section-title h2 { white-space: normal; font-size: 2rem; }
+}
+
 .glitch-line {
-    height: 2px;
+    height: 1px;
     width: 100%;
-    background: repeating-linear-gradient(90deg, var(--neon-blue) 0, var(--neon-blue) 10px, transparent 10px, transparent 20px);
-    opacity: 0.5;
+    background: linear-gradient(90deg, var(--neon-blue), transparent);
 }
 
 /* Event Row (Ticket Style) */
@@ -204,6 +195,34 @@ main {
     opacity: 0.7;
 }
 
+/* Archive Divider */
+.archive-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+.archive-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #1a2e47;
+}
+.archive-divider span {
+    position: relative;
+    background: #0A192F;
+    padding: 0.2rem 0.75rem;
+    border: 1px solid #1a2e47;
+    color: #445B7F;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
 /* Past Event State */
 .past-event { opacity: 0.5; pointer-events: none; }
 .past-event .event-date { border-color: #222; }
@@ -277,18 +296,18 @@ main {
     .hero-stats { gap: 2rem; flex-wrap: wrap; }
     
     .event-row {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         gap: 1rem;
-        text-align: center;
+        padding: 2rem 1rem;
     }
-    
-    .event-date { width: 100%; height: 50px; flex-direction: row; gap: 0.5rem; }
-    .event-date .day { font-size: 1.2rem; }
-    
+
+    .event-date { width: 80px; min-width: 80px; height: auto; flex-direction: column; gap: 0; padding: 0.5rem; }
+    .event-date .day { font-size: 1.4rem; }
+
     .event-action { width: 100%; }
     .rsvp-btn { display: block; width: 100%; }
-    
-    .desc { margin: 0 auto; }
 }
 
 /* Ensure all rows have the same vertical alignment */
@@ -321,15 +340,16 @@ main {
     }
 
     .event-row {
-        flex-direction: column; /* Stacks date, details, and button */
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 2.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1rem;
+        padding: 2rem 1rem;
     }
 
     .event-date {
-        margin-bottom: 0.5rem;
+        width: 70px;
+        margin-bottom: 0;
     }
 
     .event-action {

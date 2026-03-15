@@ -1,26 +1,6 @@
 /* about.css - Complete File */
 
 /* Page Hero */
-.page-hero {
-    padding: 8rem 2rem 4rem;
-    text-align: center;
-    background: linear-gradient(180deg, rgba(100, 255, 218, 0.05) 0%, transparent 100%);
-}
-
-.page-hero h1 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--neon-blue);
-    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
-    margin-bottom: 1rem;
-}
-
-.page-hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto;
-}
 
 /* Mission Section - SIDE BY SIDE LAYOUT */
 .mission-section { padding: 4rem 2rem; }
@@ -69,7 +49,7 @@
 .stat-label { color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
 
 /* People Section - FIXED STACKING */
-.people-section { padding: 4rem 2rem; background: #0A192F; }
+.people-section { padding: 4rem 2rem 0; background: #0A192F; }
 
 .section-header { text-align: center; margin-bottom: 4rem; }
 .section-header h2 { color: var(--neon-blue); font-size: 2.5rem; font-family: var(--font-heading); }
@@ -161,25 +141,46 @@
 .role { font-size: 0.8rem; color: var(--neon-blue); display: block; }
 
 /* Faculty Section */
-.faculty-section { padding: 6rem 2rem; }
-.faculty-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
+.faculty-section { padding: 0 2rem 6rem; }
+.faculty-container { display: flex; flex-direction: column; gap: 2rem; }
+.faculty-container .section-header { margin-top: 2rem; margin-bottom: 2rem; }
 
 .faculty-card, .lab-card {
     background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
+.faculty-card:hover, .lab-card:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.faculty-card-wide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.faculty-info { flex: 1; }
+
 .faculty-initials {
-    width: 80px; height: 80px; border-radius: 50%;
+    width: 120px; height: 120px; border-radius: 50%;
     background: #222; border: 2px solid var(--neon-blue);
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem; font-weight: 700; color: var(--neon-blue);
-    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    overflow: hidden; position: relative;
 }
 
-.faculty-title { color: var(--neon-blue); margin-bottom: 1rem; font-weight: 600; }
+.faculty-title { color: var(--neon-blue); margin-top: 0.5rem; margin-bottom: 1rem; font-weight: 400; }
 .faculty-bio { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
 
 .lab-features {
@@ -257,6 +258,8 @@
 @media (max-width: 968px) {
     .mission-layout { grid-template-columns: 1fr; gap: 3rem; }
     .faculty-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card { padding: 1.5rem 1rem; }
     
     /* On mobile, people rows naturally stack, but grid scroll stays */
     .people-grid { width: auto; flex-wrap: nowrap; overflow-x: auto; }
@@ -362,10 +365,10 @@
     .people-grid-full { grid-template-columns: 1fr; }
 }
 
-/* --- Left-Aligned Fix for Dr. Beheshti Image --- */
+/* --- Dr. Beheshti Image --- */
 
 .faculty-initials {
-    width: 130px; 
+    width: 130px;
     height: 130px;
     border-radius: 50%;
     border: 3px solid #111;
@@ -374,16 +377,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Changed from 'margin: 0 auto' to 'margin: 0 0' for left alignment */
-    margin: 0 0 2rem 0; 
+    margin: 0;
     position: relative;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .faculty-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     display: block;
     position: absolute;
     top: 50%;
