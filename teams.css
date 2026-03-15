@@ -248,6 +248,8 @@
 .teams-cta {
     text-align: center;
     padding: 2rem 2rem 4rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .teams-cta h2 { color: #fff; font-family: var(--font-heading); margin-bottom: 1.5rem; }
